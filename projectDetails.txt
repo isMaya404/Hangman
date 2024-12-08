@@ -83,18 +83,3 @@ Word Guessed or Max Attempts Reached? (Diamond - Decision)                      
                          |                                                       |
                 Next Level (Rectangle - Process)                Reset to Level 1 (Rectangle - Process)
 
-
-
-IV. Setup
-
-compile and run with:
-
-bash
-```
-javac -d out *.java
-java -cp out HangmanGame 
-
-```
-
-note: must have java compiler properly setup
-
