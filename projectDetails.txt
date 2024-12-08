@@ -1,10 +1,10 @@
-Title: Hangman Game
+Title: "Hangman Game"
 
-Leader: Jeremiah Francia
+Leader: Jeremiah P. Francia
 Members: 
 
 
-I. Introduction:
+I. Introduction
 
 The Hangman game is a classic word-guessing game where players aim to reveal a hidden word by guessing its letters. In this implementation, the game is designed using object-oriented programming principles and incorporates multiple levels of increasing difficulty. Players have a limited number of incorrect guesses and a shared pool of hints that they can use throughout the game. The game challenges players' vocabulary and deductive skills while offering a structured and fun experience.
 
@@ -18,68 +18,71 @@ The objective of this project is to create a simple Hangman game in Java using O
 4.    The ability to reset to level 1 upon game over, ensuring replayability.
 
 
-III. Flowchart:
+III. Flowchart
 
---------------------------------
-|  Legend: Name (Shape - Type) |
---------------------------------
+Shape Legend:
+    I/O (Parallelogram) 
+    Process (Rectangle) 
+    Decision (Diamond) 
 
 
+                             /-----------------------\  
+                             |    Start Game         |  (I/O)
+                             \-----------------------/
+                                       |
+                                       |                                         
+                             /---------------------\                          
+                             |   Start Level 1      |  (Process)              
+                             \---------------------/                          
+                                       |
+                              /-------------------------------------------\
+                              |                                           |
+                        /-------------------------\                /----------------------------\
+                        |  Guess Letter?          |  (Decision)   |         Hint?               |  (Decision)
+                        \-------------------------/                \----------------------------/
+                                       |                                           |
+                             /-------------------\                           /-------------------\    /-----------------------\
+                             |   Good Guess      |  (Process)               |  Has Hints?        |    |    No Hints Left?      |  (I/O)
+                             \-------------------/                           \-------------------/    \-----------------------/
+                                       |                                           |                        |
+                             /-----------------------\                       /-------------------\     /-------------------\
+                             | Continue Game         |  (Process)             | Reveal Letter     |  (Process) |   No More Hints  |  (I/O)
+                             \-----------------------/                       \-------------------/     \-------------------/  
+                                       |                                           |
+                               /-----------------------\                   /---------------------------\
+                               | Wrong Guess           |  (Process)        | Reveal Hint (Letter)     |  (Process)
+                               \-----------------------/                   \---------------------------/
+                                       |                                           |
+                               /------------------\                             /---------------------\
+                               | Increase Wrong   |  (Process)                 | Reveal Letter Again | (Process)
+                               | Attempts         |                             \---------------------/
+                               \------------------/                                      |
+                                       |                                            /-------------------\
+                                       |                                            |     Level Done     | (Process)
+                                       |                                            \-------------------/
+                                       |                                                     |
+                               /------------------------\                          /---------------------\
+                               | Is Word Guessed?       |  (Decision)               |  Move to Next Level |  (Process)
+                               \------------------------/                          \---------------------/
+                                       |                                                     |
+                                   /------------\                                  /----------------------\
+                                   |     No     |  (I/O)                           |     Level Completed  | (I/O)
+                                   \------------/                                  \----------------------/
+                                       |                                                     |
+                               /------------------\                                   /-----------------------\
+                               |   End Level      |  (I/O)                             | Game Over / End Game  | (I/O)
+                               \------------------/                                   \-----------------------/
+                                       |
+                               /-----------------------\
+                               |  Is Game Won?          |  (Decision)
+                               \-----------------------/
+                                       |
+                                   /------------\
+                                   |     Yes    |  (I/O)
+                                   \------------/
+                                       |
+                            /------------------------------------------\
+                            | "Hooray! You completed all levels!"     |  (I/O)
+                            \------------------------------------------/
 
-                   Start (Oval - Start/End)
-                             |
-             Initialize Game (Rectangle - Process)
-                             |
-          Level Loop Begins (Parallelogram - Input/Output)
-                             |
-        +--------------------+--------------------+
-        |                                         |
-  Level Exists? (Diamond - Decision)        End (You Win!) (Oval - Start/End)
-        |
-        v
-  Start Level (Rectangle - Process)
-        |
-        |
-  Gameplay Loop Begins (Parallelogram - Input/Output)
-        |
-        |
-        +--------------------+-------------------------------------------------------------------+
-        |                                                                                        |
-        |                                                                                        |
-Word Guessed or Max Attempts Reached? (Diamond - Decision)                      Continue Gameplay (Rectangle - Process)
-        |                                                                                        |
-        |                                                                                        |
-        +--------------------+                                            Input Letter or Hint (Parallelogram - Input/Output)
-        |                    |                                                                   |
-  Word Guessed? (Diamond - Decision)                                          Max Attempts Reached? (Diamond - Decision)  
-        |                    |                                                                   |
-        |                    |                                                                   |
-   Congratulations (Rectangle - Process)                                           Game Over (Rectangle - Process)
-        |                    |                                                                   |
-        |                    |                                                                   |
-     Next Level (Rectangle - Process)                                           Reset to Level 1 (Rectangle - Process)  
-                             |
-                             |
-                             |
-                     +---------------------------------------------------+
-                     |                                                   |
-               Valid Input (Diamond - Decision)           Invalid Input (Rectangle - Process)
-                     |
-                     |
-                     |
-         +-----------+-------------------------------------------------------------------------+
-         |                                                                                     |
-    Hint Requested (Rectangle - Process)                                      Letter Guessed (Rectangle - Process)
-         |                                                                                     |
-    Show Hint (Rectangle - Process)                                            Correct or Wrong (Diamond - Decision)
-         |                                                                                     |
-    Update Display (Rectangle - Process)                                        Update Display (Rectangle - Process)
-                                  |
-                                  |
-                                  |
-                         +--------+----------------------------------------------+
-                         |                                                       |
-              Word Guessed? (Diamond - Decision)              Max Attempts Reached? (Diamond - Decision)
-                         |                                                       |
-                Next Level (Rectangle - Process)                Reset to Level 1 (Rectangle - Process)
 
