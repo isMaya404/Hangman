@@ -26,7 +26,6 @@ III. Flowchart:
 
 
 
-
                    Start (Oval - Start/End)
                              |
              Initialize Game (Rectangle - Process)
