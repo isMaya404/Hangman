@@ -2,8 +2,7 @@
 
 compile and run with:
 
-bash
-```
+```bash
 javac -d out *.java
 java -cp out HangmanGame 
 ```
