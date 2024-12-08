@@ -6,7 +6,6 @@ bash
 ```
 javac -d out *.java
 java -cp out HangmanGame 
-
 ```
 
 note: must have java compiler properly setup
