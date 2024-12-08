@@ -6,7 +6,11 @@ Members:
 
 I. Introduction
 
-The Hangman game is a classic word-guessing game where players aim to reveal a hidden word by guessing its letters. In this implementation, the game is designed using object-oriented programming principles and incorporates multiple levels of increasing difficulty. Players have a limited number of incorrect guesses and a shared pool of hints that they can use throughout the game. The game challenges players' vocabulary and deductive skills while offering a structured and fun experience.
+The Hangman game is a classic word-guessing game where players aim to reveal a hidden word by guessing its letters.
+In this implementation, the game is designed using object-oriented programming principles and incorporates multiple
+levels of increasing difficulty. Players have a limited number of incorrect guesses and a shared pool of hints that
+they can use throughout the game. The game challenges players' vocabulary and deductive skills while offering a 
+structured and fun experience.
 
 II. Objective:
 
